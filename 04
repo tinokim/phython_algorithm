@@ -1,12 +1,19 @@
-a, b = map(int, input().split())
-aa=a
-bb=b
-c=0
-d=0
-while a >= b :
-    aa-=1
-    d+=1
-    if aa//bb != 0:
-        c = a//b
-        bb = b/a
-print(d)
+# a, b = map(int, input().split())
+# aa=a
+# bb=b
+# c=0
+# d=0
+# while a >= b :
+#     aa-=1
+#     d+=1
+#     if aa//bb != 0:
+#         c = a//b
+#         bb = b/a
+# print(d)
+n, k = map(int, input().split())
+answer = 0
+
+while n >= 1:
+    pass
+
+print(answer)
