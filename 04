@@ -12,8 +12,12 @@
 # print(d)
 n, k = map(int, input().split())
 answer = 0
-
-while n >= 1:
-    pass
-
+while n >= k:
+    if n//k != 0 :
+        n /= k
+        answer += 1
+    else :
+        n-=1
+        answer += 1
+answer += n
 print(answer)
