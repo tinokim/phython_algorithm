@@ -1,26 +1,41 @@
-money = int(input())
-# n700=0
-# n400=0
-# n100=0
-# n700=money//700
-# money%=700
-# n400=money//400
-# print(n400)
-# money%=400
-# print(money)
-# n100=money//100
-# money%=100
+n = int(input())
+data = list(input().split())
 
-# print("700 : %d "  %n700)
-# print("400 : %d "  %n400)
-# print("100 : %d "  %n100)
-# print("나머지 : %d"  %money)
+x, y =  1, 1
+# directinos = {'L': (0, -1), 'R': (0, 1), 'U': (-1, 0), 'D': (1, 0)}
+#
+# for i in data:
+#     dx, dy = directinos[i]
+#     nx = x + dx
+#     ny = y + dy
+#     if 1<= nx <=n and 1 <= ny <=n:
+#         x = nx
+#         y = ny
+#
+# print(x, y)
 
-# 변수 생각하고 만들고
-# 적절한 자료구조와 반복문
-data = [700, 400, 100]
+def check(command):
+    global x
+    global y
+    nx, ny = 0, 0
+    if data[i] == 'L':
+        nx = x
+        ny = y - 1
+    elif data[i] == 'R':
+        nx = x
+        ny = y + 1
+    elif data[i] == 'U':
+        nx = x -1
+        ny = y
+    elif data[i] == 'D':
+        nx = x+1
+        ny = y
 
-for x in data:
-    target = money // x
-    money = money % x
-    print(target)
+    if 1 <= nx <= n and 1<= ny <= n:
+        x = nx
+        y = ny
+
+for i in range(len(data)):
+   check(data[i])
+
+print(x, y)
