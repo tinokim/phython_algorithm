@@ -1,5 +1,11 @@
 def solution(myString, pat):
-    transformed_string = myString.translate(str.maketrans('AB', 'BA'))
+    transformed_string = ""
+    
+    for char in myString:
+        if char == 'A':
+            transformed_string += 'B'
+        else:
+            transformed_string += 'A'
     if pat in transformed_string:
         return 1
     else:
