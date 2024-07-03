@@ -1,8 +1,7 @@
 n = int(input())
-jum = list(map(int, input().split()))
-maxJum = max(jum)
-avg = 0.0
-for i in jum:
-    avg = avg + ((i / maxJum) * 100)
-    
-print(avg / n)
+l = list(map(int, input().split()))
+r = 0.0
+m_s = max(l)
+for i in l:
+  r+=i/m_s*100
+print(r/n)
